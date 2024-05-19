@@ -1,22 +1,22 @@
 const Login = () => {
   return (
     <div className=" flex justify-center bg-gradient-to-r min-h-screen items-center">
-      <div className=" w-1/4 min-w-96 px-10 py-8 rounded-2xl border-solid border-white border-2">
+      <div className=" w-1/4 min-w-96 px-10 py-8 rounded-2xl border-solid border-slate-300 border-2">
         <form action="">
           <h1 className=" text-4xl text-center text-white">Login</h1>
           <div className=" w-full h-12 my-7">
-            <input className=" w-full h-full bg-transparent outline-none border-solid border-white border-2
+            <input className=" w-full h-full bg-transparent outline-none border-solid border-slate-300 border-2
              rounded-xl placeholder:text-white
-              text-white px-6
+              text-white px-6 
               " type="text" placeholder="Username" required />
           </div>
           <div className="w-full h-12 my-7">
-            <input  className=" w-full h-full bg-transparent outline-none border-solid border-white 
+            <input  className=" w-full h-full bg-transparent outline-none border-solid border-slate-300 
             border-2 border-r rounded-xl
             placeholder:text-white px-6 text-white" type="password" placeholder="Password" required />
           </div>
           <div className="flex justify-center mx-auto
-           border-white border-2 bg-pink-600 border-none
+           border-slate-300 border-2 bg-pink-600 border-none
             h-10 rounded-xl text-white
              
            ">
