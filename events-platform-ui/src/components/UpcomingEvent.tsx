@@ -4,37 +4,37 @@ const events = [
     title: "Wonder Girls 2010 Wonder Girls World Tour San Francisco",
     description:
       "We'll get you directly seated and inside for you to enjoy the show.",
-    image: "/Event1.png",
+    image: "/events/Event1.png",
   },
   {
     date: "AUG 20",
     title: "JYJ 2011 JYJ Worldwide Concert Barcelona",
     description: "Directly seated and inside for you to enjoy the show.",
-    image: "/Event2.png",
+    image: "/events/Event2.png",
   },
   {
     date: "SEP 18",
     title: "2011 Super Junior SM Town Live '10 World Tour New York City",
     description: "Directly seated and inside for you to enjoy the show.",
-    image: "/Event3.png",
+    image: "/events/Event3.png",
   },
   {
     date: "SEP 18",
     title: "2011 Super Junior SM Town Live '10 World Tour New York City",
     description: "Directly seated and inside for you to enjoy the show.",
-    image: "/Event4.png",
+    image: "/events/Event4.png",
   },
   {
     date: "SEP 18",
     title: "2011 Super Junior SM Town Live '10 World Tour New York City",
     description: "Directly seated and inside for you to enjoy the show.",
-    image: "/Event5.png",
+    image: "/events/Event5.png",
   },
   {
     date: "SEP 18",
     title: "2011 Super Junior SM Town Live '10 World Tour New York City",
     description: "Directly seated and inside for you to enjoy the show.",
-    image: "/Event6.png",
+    image: "/events/Event6.png",
   },
 ];
 
