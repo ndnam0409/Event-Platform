@@ -1,3 +1,6 @@
+import { NavLink} from 'react-router-dom';
+
+
 const Navbar = () => {
   return (
     <div>
@@ -10,27 +13,28 @@ const Navbar = () => {
             </a>
           </div>
           <div className="hidden md:flex items-center space-x-10">
-            <a href="#" className="text-white font-bold">
+            <NavLink 
+             className="text-white font-bold">
               Hot Events
-            </a>
-            <a href="#" className="text-white font-bold">
+            </NavLink>
+            <NavLink className="text-white font-bold">
               Create Events
-            </a>
-            <a href="#" className="text-white font-bold">
+            </NavLink>
+            <NavLink className="text-white font-bold">
               Help Center
-            </a>
-            <a
-              href="#"
+            </NavLink>
+            <NavLink
+             to='/login'
               className="text-white border border-white rounded-full hover:bg-white font-bold hover:text-black px-6 py-2 custom-hover-button transition"
             >
               Login
-            </a>
-            <a
-              href="#"
+            </NavLink>
+            <NavLink
+              to='/signup'
               className="text-white rounded-full px-6 py-2 bg-pink-500 hover:bg-pink-700 transition font-bold"
             >
               Sign Up
-            </a>
+            </NavLink>
           </div>
           <button className="md:hidden text-white focus:outline-none">
             <svg

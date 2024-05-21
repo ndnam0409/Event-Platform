@@ -1,16 +1,22 @@
-import Brand from "./components/Brand";
+import { BrowserRouter, Route ,Routes} from 'react-router-dom';
 import Header from "./components/Header";
-import Navbar from "./components/Navbar";
-import UpcomingEvent from "./components/UpcomingEvent";
+import Login from "./components/Login";
+import SignUp from "./components/Signup";
+import Navbar from './components/Navbar';
+import UpcomingEvent from './components/UpcomingEvent';
+import PageNotFound from './components/PageNotFound';
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Header />
-      <UpcomingEvent />
-      <Brand />
-    </div>
+    <BrowserRouter>
+    <Routes>
+    <Route path="home" element={<><Navbar/><Header/><UpcomingEvent/></>}>
+    </Route>
+    <Route path="login" element={<Login/>}/>
+    <Route path="signup" element={<SignUp/>}/>
+    <Route path="*" element={<PageNotFound />} />
+    </Routes>
+    </BrowserRouter>
   );
 }
 
