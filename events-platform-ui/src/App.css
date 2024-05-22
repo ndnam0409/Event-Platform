@@ -1,9 +1,0 @@
-.custom-hover-button {
-  @apply text-white border border-white rounded-full px-4 py-1 transition;
-}
-
-.custom-hover-button:hover {
-  @apply text-white;
-  background-color: #f5167e;
-  border: none;
-}
