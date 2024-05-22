@@ -97,7 +97,7 @@ const UpcomingEvent = () => {
         ))}
       </div>
       <div className="flex justify-center mt-8">
-        <button className="bg-pink-500 hover:bg-pink-700 text-white font-bold my-4 py-4 px-6 rounded-full">
+        <button className="bg-[#F5167E] hover:bg-pink-700 text-white font-bold my-4 py-4 px-6 rounded-full">
           Load More
         </button>
       </div>
