@@ -40,7 +40,7 @@ const SupportCard:React.FC<SupportCard>= ({objectSupport}) => {
     <button className="bg-yellow-400 text-white py-2 px-4 rounded shadow hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-opacity-75">View More</button>
   </div>
   <div className="relative">
-    <img className="object-cover" src="Vector.png" alt="Vector" />
+    <img className="object-cover" src="help-center/Vector.png" alt="Vector" />
     <img
       className="absolute object-cover"
       src={`${picture}`}
@@ -88,27 +88,27 @@ const HelpCenter = () => {
         <div className="ml-14 h-2 text-center">
           <h3 className="font-medium text-center text-3xl">Why it's works</h3>
           <div>
-          <img src="yellow-underline.png" alt="Line" />
+          <img src="help-center/yellow-underline.png" alt="Line" />
           </div>
         </div>
         <div className="flex justify-around max-w-4xl pt-20">
         <div className="">
           <div className="flex justify-center">
-          <img className="" src="icon1.png" alt="Icon" />
+          <img  src="help-center/icon1.png" alt="Icon" />
           </div>
           <h4 className="font-medium text-center">Persionalized hosting</h4>
           <p>Experience personalized hosting like never before on our event platform. We prioritize your needs and offer tailored event hosting solutions that cater to your unique requirements.</p>
         </div>
         <div className="">
         <div className="flex justify-center">
-          <img className="ml-11" src="icon2.png" alt="Icon" />
+          <img  src="help-center/icon2.png" alt="Icon" />
           </div>
           <h4 className="font-medium text-center">Trusted content</h4>
           <p>Discover peace of mind with our trusted content on the event platform. We curate a diverse range of reliable and verified event listings, ensuring that you have access to high-quality and reputable experiences.</p>
         </div>
         <div>
         <div className="flex justify-center">
-          <img className="ml-10" src="icon3.png" alt="Icon" />
+          <img  src="help-center/icon3.png" alt="Icon" />
           </div>
           <h4 className="font-medium text-center">Tools to easily connecting</h4>
           <p>Effortlessly connect with our suite of intuitive tools. Seamlessly bridge the gap and bring together event organizers and attendees with our user-friendly platform. </p>
