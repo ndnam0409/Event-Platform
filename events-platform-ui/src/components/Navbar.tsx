@@ -13,14 +13,14 @@ const Navbar = () => {
             </a>
           </div>
           <div className="hidden md:flex items-center space-x-10">
-            <NavLink 
+            <NavLink to="/hot"
              className="text-white font-bold">
               Hot Events
             </NavLink>
-            <NavLink className="text-white font-bold">
+            <NavLink to="/create"className="text-white font-bold">
               Create Events
             </NavLink>
-            <NavLink className="text-white font-bold">
+            <NavLink to="/help-center"className="text-white font-bold">
               Help Center
             </NavLink>
             <NavLink
