@@ -1,15 +1,11 @@
-import Brand from "./components/Brand";
-import Header from "./components/Header";
-import Navbar from "./components/Navbar";
-import UpcomingEvent from "./components/UpcomingEvent";
+import Login from "./components/Login";
+import SignUp from "./components/Signup";
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <Header />
-      <UpcomingEvent />
-      <Brand />
+      <Login />
+      <SignUp />
     </div>
   );
 }
