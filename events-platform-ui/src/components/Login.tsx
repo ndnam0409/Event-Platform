@@ -1,40 +1,89 @@
+
+import { useState } from "react";
+
 const Login = () => {
+  const [showPassword, setShowPassword] = useState(false);
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
+
   return (
-    <div className=" flex justify-center bg-gradient-to-r min-h-screen items-center">
-      <div className=" w-1/4 min-w-96 px-10 py-8 rounded-2xl border-solid border-slate-300 border-2">
-        <form action="">
-          <h1 className=" text-4xl text-center text-white">Login</h1>
-          <div className=" w-full h-12 my-7">
-            <input className=" w-full h-full bg-transparent outline-none border-solid border-slate-300 border-2
-             rounded-xl placeholder:text-white
-              text-white px-6 
-              " type="text" placeholder="Username" required />
+    <div className="flex min-h-screen items-center justify-center bg-gradient-to-r from-purple-500 to-pink-500">
+      <div className="hidden md:flex w-1/2 bg-cover">
+        <img src="./band.svg" />
+      </div>
+      <div className="flex flex-col justify-center items-center w-full md:w-1/2 bg-white bg-opacity-10 py-10 rounded-lg mr-24">
+        <div className="flex flex-col items-center my-8">
+          <h2 className="text-3xl font-bold text-white">Log in</h2>
+        </div>
+        <form className="w-full max-w-sm">
+          <div className="mb-4">
+            <label
+              className="block text-white text-sm font-bold mb-2"
+              htmlFor="email"
+            >
+              Email
+            </label>
+            <input
+              className="w-full px-3 py-2 text-gray-900 rounded-lg focus:outline-none focus:shadow-outline"
+              type="email"
+              id="email"
+              placeholder="Email"
+            />
           </div>
-          <div className="w-full h-12 my-7">
-            <input  className=" w-full h-full bg-transparent outline-none border-solid border-slate-300 
-            border-2 border-r rounded-xl
-            placeholder:text-white px-6 text-white" type="password" placeholder="Password" required />
+          <div className="relative mb-4">
+            <label
+              className="block text-white text-sm font-bold mb-2"
+              htmlFor="password"
+            >
+              Your password
+            </label>
+            <input
+              className="w-full px-3 py-2 text-gray-900 rounded-lg focus:outline-none focus:shadow-outline"
+              type={showPassword ? "text" : "password"}
+              id="password"
+              placeholder="Your password"
+            />
+            <div
+              className="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5 cursor-pointer pb-10"
+              onClick={togglePasswordVisibility}
+            >
+              <span className="text-white ml-2">
+                {showPassword ? "Hide" : "Show"}
+              </span>
+            </div>
           </div>
-          <div className="flex justify-center mx-auto
-           border-slate-300 border-2 bg-pink-600 border-none
-            h-10 rounded-xl text-white
-             
-           ">
-          <button type="submit" className=" text-white w-11/12">
-            Login
-          </button>
+          <div className="my-5">
+            <button
+              className="w-full bg-[#F5167E] hover:bg-pink-700 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline"
+              type="button"
+            >
+              Log in
+            </button>
           </div>
-          <div className=" text-white flex-col justify-between">
-            <p>
-              Don't have account?  <a href="">Register</a>
-            </p>
-            <a className=" text-white" href="#">Forgot password?</a>
-          </div>
-          <div></div>
+          <p className="text-sm text-white text-center">
+            By continuing, you agree to the{" "}
+            <a href="#" className="underline">
+              Terms of use
+            </a>{" "}
+            and{" "}
+            <a href="#" className="underline">
+              Policy
+            </a>
+          </p>
         </form>
+        <div className="mt-6 flex justify-between w-full max-w-sm my-8">
+          <p className="text-sm text-white">
+            <a href="#" className="underline">
+              Forgot your password?
+            </a>
+          </p>
+          <p className="text-sm text-white font-bold">Create account</p>
+        </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;
