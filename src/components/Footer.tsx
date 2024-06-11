@@ -11,7 +11,12 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           <div className="mb-6 md:mb-0">
-            <h2 className="text-2xl font-bold mb-4">Eventick</h2>
+            <div className="flex flex-row">
+              <img src="/logo.png" alt="Logo" className="h-4 w-4 mt-1.5" />
+              <a href="#" className="text-white text-lg font-bold ml-2">
+                Eventtick
+              </a>
+            </div>
             <p className="text-gray-300 mb-4">
               Eventick is a global self-service ticketing platform for live
               experiences that allows anyone to create, share, find and attend
