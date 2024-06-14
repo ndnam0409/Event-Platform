@@ -10,9 +10,13 @@ import Navbar from "./components/Navbar";
 import PageNotFound from "./components/PageNotFound";
 import SignUp from "./components/Signup";
 import UpcomingEvent from "./components/UpcomingEvent";
+import CreateEvent from "./components/CreateEvent";
+import OrganizationRegistration from "./components/OrganizationRegistration";
+import { AuthProvider } from "./components/contexts/FakeAuthentication";
 
 function App() {
   return (
+    <AuthProvider>
     <BrowserRouter>
       <Routes>
         <Route
@@ -21,19 +25,44 @@ function App() {
             <>
               <Navbar />
               <Header />
-              <UpcomingEvent />
+              <UpcomingEvent/>
               <Brand />
-              <Blog />
+              <Blog/>
               <Footer />
             </>
           }
-        ></Route>
+        >
+          
+        </Route>
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<SignUp />} />
-        <Route path="help-center" element={<HelpCenter />} />
+        <Route path="help-center" element={
+          <>
+        <Navbar />
+        <HelpCenter />
+        <Footer />
+        </>
+      } 
+        />
+        <Route path="create-event" element={
+          <>
+          <Navbar />
+        <CreateEvent />
+        <Footer />
+        </>
+        } />
+        <Route path="create-organization" element={
+          <>
+        <Navbar />
+        <OrganizationRegistration />
+        <Footer />
+        </>
+      } 
+        />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
+    </AuthProvider>
   );
 }
 

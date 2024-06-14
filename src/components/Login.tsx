@@ -1,12 +1,30 @@
-
-import { useState } from "react";
+import { HtmlHTMLAttributes, useEffect, useState } from "react";
+import { useAuth } from "./contexts/FakeAuthentication";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
-
+  const [email, setEmail] = useState("tai@gmail.com");
+  const { login, isAuthenticated } = useAuth();
+  const [password, setPassword] = useState("password");
+  const navigate=useNavigate()
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
+  const handleSubmit =async (e) => {
+    e.preventDefault();
+    // Check login trong If
+    if (email && password) {
+
+      await login(email, password);
+    }
+  };
+  useEffect(() => {
+    if (isAuthenticated) {
+      console.log(isAuthenticated)
+      navigate("/")
+    }
+  }, [isAuthenticated]);
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-gradient-to-r from-purple-500 to-pink-500">
@@ -17,7 +35,8 @@ const Login = () => {
         <div className="flex flex-col items-center my-8">
           <h2 className="text-3xl font-bold text-white">Log in</h2>
         </div>
-        <form className="w-full max-w-sm">
+        <form className="w-full max-w-sm"
+        onSubmit={handleSubmit}>
           <div className="mb-4">
             <label
               className="block text-white text-sm font-bold mb-2"
@@ -30,6 +49,8 @@ const Login = () => {
               type="email"
               id="email"
               placeholder="Email"
+              required
+              onChange={e=>setEmail(e.target.value)}
             />
           </div>
           <div className="relative mb-4">
@@ -44,6 +65,8 @@ const Login = () => {
               type={showPassword ? "text" : "password"}
               id="password"
               placeholder="Your password"
+              required
+              onChange={e=>setPassword(e.target.value)}
             />
             <div
               className="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5 cursor-pointer pb-10"
@@ -57,7 +80,8 @@ const Login = () => {
           <div className="my-5">
             <button
               className="w-full bg-[#F5167E] hover:bg-pink-700 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline"
-              type="button"
+              type="submit"
+              onClick={handleSubmit}
             >
               Log in
             </button>
