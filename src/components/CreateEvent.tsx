@@ -1,7 +1,12 @@
 import React from "react";
+import ProgressBar from "./ProgressBar";
+import { useNavigate } from "react-router-dom";
 
 const CreateEvent = () => {
+  const navigate=useNavigate()
   return (
+    <>
+    
     <div className="flex w-full h-full items-center justify-center bg-gradient-to-r ">
       <div className="flex flex-col justify-center items-center w-full py-10 rounded-lg">
         <div className="flex flex-col items-center my-8">
@@ -376,6 +381,7 @@ const CreateEvent = () => {
           <button
             className="h-12 w-1/4 min-w-32 bg-[#F5167E] hover:bg-pink-700 text-white font-bold py-2 px-4 rounded-md focus:outline-none focus:shadow-outline"
             type="button"
+            onClick={()=>navigate("../create-ticket")}
           >
             Next
           </button>
@@ -383,6 +389,7 @@ const CreateEvent = () => {
       </div>
       <div></div>
     </div>
+    </>
   );
 };
 

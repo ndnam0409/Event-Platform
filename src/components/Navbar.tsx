@@ -1,7 +1,7 @@
 import { NavLink} from 'react-router-dom';
-import { useAuth } from './contexts/FakeAuthentication';
+import { useAuth } from '../contexts/Authentication';
 import { useEffect } from 'react';
-import User from './User';
+import User from '../features/user/User';
 
 const Navbar = () => {
   const {isAuthenticated}=useAuth()
@@ -35,7 +35,7 @@ const Navbar = () => {
               Login
             </NavLink>
             <NavLink
-              to='/signup'
+              to='/sign-up'
               className="text-white rounded-full px-6 py-2 bg-pink-500 hover:bg-pink-700 transition font-bold"
             >
               Sign Up

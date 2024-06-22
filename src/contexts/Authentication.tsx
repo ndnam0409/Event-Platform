@@ -1,4 +1,5 @@
 import { createContext, useContext, useReducer } from "react";
+import { apiLogin } from "../services/apiAuthentication";
 
 
 
@@ -34,11 +35,15 @@ const FAKE_USER={
 
 const AuthProvider = ({children}) => {
     const [{user,isAuthenticated},dispatch]=useReducer(reducer,initialState)
-    const login=(email,password)=>{
-        if(email===FAKE_USER.email && password===FAKE_USER.password){
-            dispatch({type:"login",payload:FAKE_USER})
+    const login=(email:string,password:string)=>{
+        dispatch({type:"login",payload:FAKE_USER})
+        // apiLogin(email,password).then((res)=>{
+        //     dispatch({type:"login",payload:FAKE_USER})
+        // }).catch((err)=>{
+        //     console.log(err);
+        // })
         }
-    }
+    
     const logout=()=>{
         dispatch({type:"logout"});
     }

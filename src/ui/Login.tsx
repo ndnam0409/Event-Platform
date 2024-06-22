@@ -1,5 +1,5 @@
-import { HtmlHTMLAttributes, useEffect, useState } from "react";
-import { useAuth } from "./contexts/FakeAuthentication";
+import {  useEffect, useState } from "react";
+import { useAuth } from "../contexts/Authentication";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
@@ -11,12 +11,14 @@ const Login = () => {
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
-  const handleSubmit =async (e) => {
+  const handleSubmit =async (e:React.MouseEvent<HTMLElement>) => {
     e.preventDefault();
     // Check login trong If
     if (email && password) {
-
-      await login(email, password);
+      const isLogin=await login(email, password);
+      if(!isLogin){
+        alert("Login failed")
+      }
     }
   };
   useEffect(() => {
